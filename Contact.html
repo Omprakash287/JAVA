@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">PS</label>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Skill.html">Skill</a></li>
+            <li><a href="Project.html">Project</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="contact">
+      <div class="contact-container">
+          
+          <div class="form-container">
+              <h2>Contact</h2><br>
+              <h3>Mobile No. :-</h3><br>
+              <a href="tel:+918441049812">
+                  <h3>8441049812</h3>
+              </a><br>
+              <h3>E-mail :- </h3><br>
+              <a href="mailto:pksesma83@gmail.com">
+                  <h3>pksesma83@gmail.com</h3>
+              </a>
+              <form id="contactForm" action="your-server-endpoint" method="POST">
+                  <input type="text" required placeholder="Enter Your Name">
+                  <input type="email" required placeholder="Enter Your Email">
+                  <textarea required placeholder="Enter Your Message"></textarea>
+                  <button id="lastbutton" type="submit">Submit</button>
+              </form>
+          </div>
+      </div>
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const message = this.querySelector('textarea').value;
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+            alert('Your message has been submitted!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
